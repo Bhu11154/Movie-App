@@ -4,6 +4,7 @@ const SEARCHAPI ="https://api.themoviedb.org/3/search/movie?&api_key=04c35731a5e
 const main = document.querySelector("main");
 const form = document.getElementById("form");
 const search = document.getElementById("search");
+const latest = document.getElementById('latest');
 
 getMovies(APIURL);
 
@@ -37,17 +38,23 @@ function showMovies(movies){
 }
 
 function getColor(num){
-    if(num>=8){
+    if(num>=7.8){
         return "green";
     }else{
         return "orange";
     }
 }
 
+latest.addEventListener('click', ()=>{
+    getMovies(APIURL);
+})
+
 
 form.addEventListener("submit",(e)=>{
     e.preventDefault();
     const name = search.value;
-    getMovies(SEARCHAPI + name);
+    if(name){
+        getMovies(SEARCHAPI + name);
+    }
     search.value='';
 });
