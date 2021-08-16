@@ -1,66 +1,93 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: "Poppins", sans-serif;
-    margin: 0;
-    background-color: #373b69;
-    
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  background-color: #373b69;
 }
-.movies{
-    background-color: #41138b;
-    width:200px;
-    padding: 10px 10px 10px 10px;
-    box-shadow: 0 4px 5px rgba(0,0,0,0.2);
-    margin: 1rem;
-    position: relative;
+.movies {
+  background-color: #41138b;
+  width: 200px;
+  padding: 10px 10px 10px 10px;
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+  margin: 1rem;
+  position: relative;
 }
-.movies img{
-    max-width: 100%;
+.movies img {
+  max-width: 100%;
 }
-.movie-in{
-    display:flex;
-    align-items: center;
-    justify-content:space-between;
-    color:white;
+.movie-in {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
 }
-.movie-in h5,span{
-    margin: 0;
+.movie-in h5,
+span {
+  margin: 0;
 }
-.movie-in span{
-    background-color: rebeccapurple;
-    padding: 0.15rem;
-    margin-left: 2px;
+.movie-in span {
+  background-color: rebeccapurple;
+  padding: 0.15rem;
+  margin-left: 2px;
 }
-main{
-    display:flex;
-    flex-wrap: wrap;
+main {
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.movie-in span.green{
-    color:rgb(14, 235, 14);
+.movie-in span.green {
+  color: rgb(14, 235, 14);
 }
-.movie-in span.orange{
-    color:rgb(228, 60, 9);
+.movie-in span.orange {
+  color: rgb(228, 60, 9);
 }
-.overview{
-    position:absolute;
-    max-height: 100%;
-    padding: 1rem;
-    overflow: auto;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color:white;
-    display:none;
+.overview {
+  position: absolute;
+  max-height: 100%;
+  padding: 1rem;
+  overflow: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  display: none;
 }
 
 .movies:hover .overview {
-    display:block;
-    transition: transform 0.3s ease-in;
-    transform: translateY(0);
+  display: block;
+  transition: transform 0.3s ease-in;
+  transform: translateY(0);
+}
+
+#form {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  cursor: pointer;
+}
+#search {
+  width: 250px;
+  height: 40px;
+  padding: 8px;
+  font-size: 1.1rem;
+  outline: none;
+  background: rgb(95, 58, 133);
+  border: none;
+  margin-right: 10px;
+}
+
+.search-btn {
+  cursor: pointer;
+  margin-right: 10px;
+  background-color: teal;
+  border: none;
+}
+.search-btn:hover {
+  background-color: #41138b;
 }
